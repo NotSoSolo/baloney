@@ -1,0 +1,47 @@
+:root {
+    font-size: 1rem; // Might change this in the future if it proves problematic on ionic
+}
+
+html,
+body {
+    min-height: 100vh;
+    overflow: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+    display: block;
+    vertical-align: middle;
+}
+
+:focus {
+    outline: none;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    &::before,
+    &::after {
+        box-sizing: border-box;
+    }
+}

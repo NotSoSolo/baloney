@@ -4,8 +4,8 @@
     "description": "CSS Framework by NotSoSolo",
     "main": "index.js",
     "scripts": {
-        "dev": "sass --watch src/base/index.scss:dev/baloney.css",
-        "build": "sass src/base/index.scss:dist/baloney.min.css --style compressed",
+        "dev": "sass --watch src/index.scss:dev/baloney.css",
+        "build": "sass src/index.scss:dist/baloney.min.css --style compressed",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "author": "NotSoSolo",

@@ -10,8 +10,14 @@
     }
 }
 
+// TODO: Perhaps change this color adjust instead of change in order to allow for any base color to work
 :root {
     @each $name, $color in $theme-colors {
+        $color-extra-light: change-color($color, $lightness: 80%);
+        $color-light: change-color($color, $lightness: 60%);
+
         --color-#{$name}: #{$color};
+        --color-#{$name}-light: #{$color-light};
+        --color-#{$name}-extra-light: #{$color-extra-light};
     }
 }
