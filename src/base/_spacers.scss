@@ -1,0 +1,28 @@
+// Margin and padding utility classes
+@each $size in $sizes {
+    .m-#{$size} {
+        margin: $size * $spacer;
+    }
+
+    .p-#{$size} {
+        padding: $size * $spacer;
+    }
+
+
+    // .mt, mb, ml, mr, (And for padding)
+    @each $prefix, $side in $sides {
+        .m#{$prefix}-#{$size} {
+            margin-#{$side}: $size * $spacer;
+        }
+
+        .p#{$prefix}-#{$size} {
+            padding-#{$side}: $size * $spacer;
+        }
+    }
+}
+
+:root {
+    @each $size in $sizes {
+        --spacer-#{$size}: #{$size * $spacer};
+    }
+}

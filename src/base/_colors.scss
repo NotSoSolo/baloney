@@ -1,0 +1,17 @@
+// Set classes for theme-color class bindings and create css variables
+
+@each $name, $color in $theme-colors {
+    .text-#{$name} {
+        color: $color;
+    }
+
+    .bg-#{$name} {
+        background-color: $color;
+    }
+}
+
+:root {
+    @each $name, $color in $theme-colors {
+        --color-#{$name}: #{$color};
+    }
+}
