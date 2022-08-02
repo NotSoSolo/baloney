@@ -1,0 +1,5 @@
+:root {
+    @each $transition, $value in $transitions {
+        --#{$transition}: #{$value};
+    }
+}

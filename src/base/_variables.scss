@@ -11,9 +11,6 @@
 }
 
 // Variables
-//
-// Variables should follow the `$component-state-property-size` formula for
-// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
 
 // Color system
 $white:        #fff !default;
@@ -40,61 +37,53 @@ $grays: (
     "900": $gray-900
 ) !default;
 
-$blue:        #0d6efd !default;
-$indigo:    #6610f2 !default;
-$purple:    #6f42c1 !default;
-$pink:        #d63384 !default;
-$red:         #dc3545 !default;
-$orange:    #fd7e14 !default;
-$yellow:    #ffc107 !default;
-$green:     #198754 !default;
-$teal:        #20c997 !default;
-$cyan:        #0dcaf0 !default;
+$blue: #0d6efd !default;
+$indigo: #6610f2 !default;
+$purple: #6f42c1 !default;
+$pink: #d63384 !default;
+$red: #dc3545 !default;
+$orange: #fd7e14 !default;
+$yellow: #ffc107 !default;
+$green: #198754 !default;
+$teal: #20c997 !default;
+$cyan: #0dcaf0 !default;
 
 $colors: (
-    "blue":             $blue,
-    "indigo":         $indigo,
-    "purple":         $purple,
-    "pink":             $pink,
-    "red":                $red,
-    "orange":         $orange,
-    "yellow":         $yellow,
-    "green":            $green,
-    "teal":             $teal,
-    "cyan":             $cyan,
-    "black":            $black,
-    "white":            $white,
-    "gray":             $gray-600,
-    "gray-dark":    $gray-800
+    "blue": $blue,
+    "indigo": $indigo,
+    "purple": $purple,
+    "pink": $pink,
+    "red": $red,
+    "orange": $orange,
+    "yellow": $yellow,
+    "green": $green,
+    "teal": $teal,
+    "cyan": $cyan,
+    "black": $black,
+    "white": $white,
+    "gray": $gray-600,
+    "gray-dark": $gray-800
 ) !default;
 
-$primary:             $blue !default;
-$secondary:         $gray-600 !default;
-$success:             $green !default;
-$info:                    $cyan !default;
-$warning:             $yellow !default;
-$danger:                $red !default;
-$light:                 $gray-100 !default;
-$dark:                    $gray-900 !default;
+$brand: #00F0B5;
+$primary: $blue !default;
+$secondary: $gray-600 !default;
+$success: $green !default;
+$info: $cyan !default;
+$warning: $yellow !default;
+$danger: $red !default;
+$light: $gray-100 !default;
+$dark: $gray-900 !default;
 
 $theme-colors: (
-    "primary":        $primary,
-    "secondary":    $secondary,
-    "success":        $success,
-    "info":             $info,
-    "warning":        $warning,
-    "danger":         $danger,
-    "light":            $light,
-    "dark":             $dark
-) !default;
-
-// Characters which are escaped by the escape-svg function
-$escaped-characters: (
-    ("<", "%3c"),
-    (">", "%3e"),
-    ("#", "%23"),
-    ("(", "%28"),
-    (")", "%29"),
+    "primary": $primary,
+    "secondary": $secondary,
+    "success": $success,
+    "info": $info,
+    "warning": $warning,
+    "danger": $danger,
+    "light": $light,
+    "dark": $dark
 ) !default;
 
 // Spacing
@@ -112,7 +101,7 @@ $sides: (
     "r": "right"
 ) !default;
 
-
+// Multiplication of $spacer
 $sizes: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 24, 36 !default;
 
 $offset-values: (
@@ -121,35 +110,13 @@ $offset-values: (
     100: 100%
 ) !default;
 
-// Body
-//
-// Settings for the `<body>` element.
-
-$body-bg:                                     $white !default;
-$body-color:                                $gray-900 !default;
-$body-text-align:                     null !default;
+$body-bg: $white !default;
+$body-color: $gray-900 !default;
+$body-text-align: null !default;
 
 // Links
 //
 // Style anchor elements.
-
-$link-color: $primary !default;
-$link-decoration: underline !default;
-$link-shade-percentage: 20% !default;
-$link-hover-color: shift-color($link-color, $link-shade-percentage) !default;
-$link-hover-decoration: null !default;
-
-// Paragraphs
-//
-// Style p element.
-
-$paragraph-margin-bottom:     1rem !default;
-
-
-// Grid breakpoints
-//
-// Define the minimum dimensions at which your layout will change,
-// adapting to different screen sizes, for use in media queries.
 
 $border-radius: .375rem !default;
 $border-radius-sm: .25rem !default;
@@ -163,8 +130,41 @@ $box-shadow-sm: 0 .125rem .25rem rgba($black, .075) !default;
 $box-shadow-lg: 0 1rem 3rem rgba($black, .175) !default;
 $box-shadow-inset: inset 0 1px 2px rgba($black, .075) !default;
 
-$transition-base: all .2s ease-in-out !default;
-$transition-fade: opacity .15s linear !default;
+// Transitions
+
+$transition-duration-fast: .1s !default;
+$transition-duration: .2s !default;
+$transition-duration-slow: $transition-duration * 2 !default;
+
+$transition-fast: all $transition-duration-fast ease !default;
+$transition-base: all $transition-duration ease !default;
+$transition-slow: all $transition-duration-slow ease !default;
+
+$easing-in-out-quart: cubic-bezier(.76, 0, .24, 1) !default;
+$easing-ease-out-back: cubic-bezier(.34, 1.56, .64, 1) !default;
+$easing-ease-out-back-reverse: cubic-bezier(1, .64, 1.56, .34) !default;
+
+$transition-bounce-back-fast: #{$transition-duration-fast} #{$easing-ease-out-back} !default;
+$transition-bounce-back: #{$transition-duration} #{$easing-ease-out-back} !default;
+$transition-bounce-back-slow: #{$transition-duration-slow} #{$easing-ease-out-back} !default;
+
+$transitions: (
+    "transition-duration-fast": $transition-duration-fast,
+    "transition-duration": $transition-duration,
+    "transition-duration-slow": $transition-duration-slow,
+
+    "transition-fast": $transition-fast,
+    "transition-base": $transition-base,
+    "transition-slow": $transition-slow,
+
+    "easing-in-out-quart": $easing-in-out-quart,
+    "easing-ease-out-back": $easing-ease-out-back,
+    "easing-ease-out-back-reverse": $easing-ease-out-back-reverse,
+
+    "transition-bounce-back-fast": $transition-bounce-back-fast,
+    "transition-bounce-back": $transition-bounce-back,
+    "transition-bounce-back-slow": $transition-bounce-back-slow,
+) !default;
 
 // Typography
 //
@@ -198,7 +198,6 @@ $h3-font-size: $font-size-base * 1.75 !default;
 $h4-font-size: $font-size-base * 1.5 !default;
 $h5-font-size: $font-size-base * 1.25 !default;
 $h6-font-size: $font-size-base !default;
-// scss-docs-end font-variables
 
 $font-sizes: (
     1: $h1-font-size,
@@ -209,13 +208,9 @@ $font-sizes: (
     6: $h6-font-size
 ) !default;
 
-$headings-margin-bottom:            $spacer * .5 !default;
-$headings-font-family:                null !default;
-$headings-font-style:                 null !default;
-$headings-font-weight:                500 !default;
-$headings-line-height:                1.2 !default;
-$headings-color:                            null !default;
+$breakpoints: (
+    "mobile": 375px,
+    "tablet": 1024px,
+    "desktop": 1400px
+) !default;
 
-$media-mobile: 375px;
-$media-tablet: 1024px;
-$media-desktop: 1400px;
