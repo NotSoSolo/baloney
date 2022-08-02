@@ -1,7 +1,7 @@
 {
     "name": "baloney",
     "version": "0.0.1",
-    "description": "CSS Framework by NotSoSolo",
+    "description": "CSS utilities and variables by NotSoSolo",
     "main": "src/index.scss",
     "sass": "src/index.scss",
     "style": "src/index.scss",
