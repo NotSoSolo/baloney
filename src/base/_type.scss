@@ -6,4 +6,8 @@
     @each $name, $font-family in $font-families {
         --font-family-#{$name}: #{$font-family};
     }
+
+    @each $name, $font-weight in $font-weights {
+        --font-weight-#{$name}: #{$font-weight};
+    }
 }

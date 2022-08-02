@@ -1,0 +1,5 @@
+:root {
+    @each $breakpoint, $value in $breakpoints {
+        --breakpoint-#{$breakpoint}: #{$value};
+    }
+}

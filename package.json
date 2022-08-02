@@ -2,7 +2,9 @@
     "name": "baloney",
     "version": "0.0.1",
     "description": "CSS Framework by NotSoSolo",
-    "main": "index.js",
+    "main": "src/index.scss",
+    "sass": "src/index.scss",
+    "style": "src/index.scss",
     "scripts": {
         "dev": "sass --watch src/index.scss:dev/baloney.css",
         "build": "sass src/index.scss:dist/baloney.min.css --style compressed",

@@ -183,13 +183,27 @@ $font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
 // $font-size-sm:                                $font-size-base * .875 !default;
 // $font-size-lg:                                $font-size-base * 1.25 !default;
 
-$font-weight-lighter: lighter !default;
+$font-weight-thin: 100 !default;
+$font-weight-extra-light: 200 !default;
 $font-weight-light: 300 !default;
 $font-weight-normal: 400 !default;
-$font-weight-medium: 600 !default;
+$font-weight-medium: 500 !default;
+$font-weight-semi-bold: 600 !default;
 $font-weight-bold: 700 !default;
-$font-weight-bolder: bolder !default;
+$font-weight-extra-bold: 800 !default;
 $font-weight-black: 900 !default;
+
+$font-weights: (
+    "thin": $font-weight-thin,
+    "extra-light": $font-weight-extra-light,
+    "light": $font-weight-light,
+    "normal": $font-weight-normal,
+    "medium": $font-weight-medium,
+    "semi-bold": $font-weight-semi-bold,
+    "bold": $font-weight-bold,
+    "extra-bold": $font-weight-extra-bold,
+    "black": $font-weight-black
+) !default;
 
 $line-height-base: 1.5 !default;
 $line-height-sm: 1.25 !default;
@@ -212,9 +226,13 @@ $font-sizes: (
     6: $font-size-6
 ) !default;
 
+$breakpoint-mobile: 375px;
+$breakpoint-tablet: 1024px;
+$breakpoint-desktop: 1400px;
+
 $breakpoints: (
-    "mobile": 375px,
-    "tablet": 1024px,
-    "desktop": 1400px
+    "mobile": $breakpoint-mobile,
+    "tablet": $breakpoint-tablet,
+    "desktop": $breakpoint-desktop
 ) !default;
 
