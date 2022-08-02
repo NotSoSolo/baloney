@@ -172,8 +172,11 @@ $transitions: (
 
 $font-family-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
-// $font-family-base:                        var(--#{$prefix}font-sans-serif) !default;
-// $font-family-code:                        var(--#{$prefix}font-monospace) !default;
+
+$font-families: (
+    "sans-serif": $font-family-sans-serif,
+    "monospace": $font-family-monospace
+) !default;
 
 $font-size-root: null !default;
 $font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
@@ -192,20 +195,21 @@ $line-height-base: 1.5 !default;
 $line-height-sm: 1.25 !default;
 $line-height-lg: 2 !default;
 
-$h1-font-size: $font-size-base * 2.5 !default;
-$h2-font-size: $font-size-base * 2 !default;
-$h3-font-size: $font-size-base * 1.75 !default;
-$h4-font-size: $font-size-base * 1.5 !default;
-$h5-font-size: $font-size-base * 1.25 !default;
-$h6-font-size: $font-size-base !default;
+// TODO: Change this so 4 === base
+$font-size-1: $font-size-base * 2.5 !default;
+$font-size-2: $font-size-base * 2 !default;
+$font-size-3: $font-size-base * 1.75 !default;
+$font-size-4: $font-size-base * 1.5 !default;
+$font-size-5: $font-size-base * 1.25 !default;
+$font-size-6: $font-size-base !default;
 
 $font-sizes: (
-    1: $h1-font-size,
-    2: $h2-font-size,
-    3: $h3-font-size,
-    4: $h4-font-size,
-    5: $h5-font-size,
-    6: $h6-font-size
+    1: $font-size-1,
+    2: $font-size-2,
+    3: $font-size-3,
+    4: $font-size-4,
+    5: $font-size-5,
+    6: $font-size-6
 ) !default;
 
 $breakpoints: (

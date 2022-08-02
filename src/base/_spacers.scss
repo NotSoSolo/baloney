@@ -1,13 +1,29 @@
 // Margin and padding utility classes
+// ? the -inline and -block might become annoying when overwriting these specifically with margin-left or padding-left for example. In which case make these explicit
 @each $size in $sizes {
     .m-#{$size} {
         margin: $size * $spacer;
+    }
+
+    .my-#{$size} {
+        margin-block: $size * $spacer;
+    }
+
+    .mx-#{$size} {
+        margin-inline: $size * $spacer;
     }
 
     .p-#{$size} {
         padding: $size * $spacer;
     }
 
+    .py-#{$size} {
+        padding-block: $size * $spacer;
+    }
+
+    .px-#{$size} {
+        padding-inline: $size * $spacer;
+    }
 
     // .mt, mb, ml, mr, (And for padding)
     @each $prefix, $side in $sides {

@@ -28,7 +28,8 @@ iframe,
 embed,
 object {
     display: block;
-    vertical-align: middle;
+    // ? Disabled for now, We'll see if this ends up being an issue
+    // vertical-align: middle;
 }
 
 :focus {
