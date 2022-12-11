@@ -1,0 +1,33 @@
+$transition-duration-fast: .1s !default;
+$transition-duration: .2s !default;
+$transition-duration-slow: $transition-duration * 2 !default;
+
+$transition-fast: all $transition-duration-fast ease !default;
+$transition-base: all $transition-duration ease !default;
+$transition-slow: all $transition-duration-slow ease !default;
+
+$easing-in-out-quart: cubic-bezier(.76, 0, .24, 1) !default;
+$easing-ease-out-back: cubic-bezier(.34, 1.56, .64, 1) !default;
+$easing-ease-out-back-reverse: cubic-bezier(1, .64, 1.56, .34) !default;
+
+$transition-bounce-back-fast: #{$transition-duration-fast} #{$easing-ease-out-back} !default;
+$transition-bounce-back: #{$transition-duration} #{$easing-ease-out-back} !default;
+$transition-bounce-back-slow: #{$transition-duration-slow} #{$easing-ease-out-back} !default;
+
+$transitions: (
+    "transition-duration-fast": $transition-duration-fast,
+    "transition-duration": $transition-duration,
+    "transition-duration-slow": $transition-duration-slow,
+
+    "transition-fast": $transition-fast,
+    "transition-base": $transition-base,
+    "transition-slow": $transition-slow,
+
+    "easing-in-out-quart": $easing-in-out-quart,
+    "easing-ease-out-back": $easing-ease-out-back,
+    "easing-ease-out-back-reverse": $easing-ease-out-back-reverse,
+
+    "transition-bounce-back-fast": $transition-bounce-back-fast,
+    "transition-bounce-back": $transition-bounce-back,
+    "transition-bounce-back-slow": $transition-bounce-back-slow,
+) !default;

@@ -1,0 +1,54 @@
+$font-size-root: null !default;
+$font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
+
+$font-family-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+
+$font-size-xs: .625rem !default; // 10px
+$font-size-small: .75rem !default; // 12px
+$font-size-secondary: .875rem !default; // 14px
+$font-size-body: 1rem !default; // 16px
+$font-size-medium: 1.125rem !default; // 18px
+$font-size-large: 1.25rem !default; // 20px
+$font-size-xlarge: 1.375rem !default; // 22px
+$font-size-xxlarge: 1.75rem !default; // 28px
+$font-size-header: 2.75rem !default; // 44px
+
+$font-weight-thin: 100 !default;
+$font-weight-extra-light: 200 !default;
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-medium: 500 !default;
+$font-weight-semi-bold: 600 !default;
+$font-weight-bold: 700 !default;
+$font-weight-extra-bold: 800 !default;
+$font-weight-black: 900 !default;
+
+$font-families: (
+    "sans-serif": $font-family-sans-serif,
+    "monospace": $font-family-monospace
+) !default;
+
+$font-sizes: (
+    "xs": $font-size-xs,
+    "small": $font-size-small,
+    "secondary": $font-size-secondary,
+    "body": $font-size-body,
+    "medium": $font-size-medium,
+    "large": $font-size-large,
+    "xlarge": $font-size-xlarge,
+    "xxlarge": $font-size-xxlarge,
+    "header": $font-size-header,
+) !default;
+
+$font-weights: (
+    "thin": $font-weight-thin,
+    "extra-light": $font-weight-extra-light,
+    "light": $font-weight-light,
+    "normal": $font-weight-normal,
+    "medium": $font-weight-medium,
+    "semi-bold": $font-weight-semi-bold,
+    "bold": $font-weight-bold,
+    "extra-bold": $font-weight-extra-bold,
+    "black": $font-weight-black
+) !default;

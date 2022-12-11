@@ -1,0 +1,5 @@
+:root {
+    @each $name, $value in $box-shadows {
+        --box-shadow-#{$name}: #{$value};
+    }
+}

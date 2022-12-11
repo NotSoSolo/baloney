@@ -1,0 +1,18 @@
+// ! THESE ALL HAVE TO BE COLORS WITH A LIGHTNESS OF 50%
+$color-primary-500: #bc7225 !default;
+$color-accent-500: #4b93b9 !default;
+$color-grayscale-500: #71717a !default;
+$color-success-500: #00F0B5 !default;
+$color-warning-500: #eab308 !default;
+$color-danger-500: #ec7550 !default;
+
+$color-scales: 50, 100, 200, 300, 400, 500, 600, 700, 800, 900 !default;
+
+$theme-colors: (
+    primary: $color-primary-500,
+    accent: $color-accent-500,
+    grayscale: $color-grayscale-500,
+    success: $color-success-500,
+    warning: $color-warning-500,
+    danger: $color-danger-500
+) !default;

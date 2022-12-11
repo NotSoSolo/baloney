@@ -1,0 +1,15 @@
+$border-radius-sm: .25rem !default;
+$border-radius-md: .375rem !default;
+$border-radius-lg: .5rem !default;
+$border-radius-xl: 1rem !default;
+$border-radius-2xl: 2rem !default;
+$border-radius-pill: 50rem !default;
+
+$border-radii: (
+    "sm": $border-radius-sm,
+    "md": $border-radius-md,
+    "lg": $border-radius-lg,
+    "xl": $border-radius-xl,
+    "2xl": $border-radius-2xl,
+    "pill": $border-radius-pill,
+) !default;

@@ -1,10 +1,10 @@
 :root {
-    @each $prefix, $font-size in $font-sizes {
-        --font-size-#{$prefix}: #{$font-size};
-    }
-
     @each $name, $font-family in $font-families {
         --font-family-#{$name}: #{$font-family};
+    }
+
+    @each $prefix, $font-size in $font-sizes {
+        --font-size-#{$prefix}: #{$font-size};
     }
 
     @each $name, $font-weight in $font-weights {
