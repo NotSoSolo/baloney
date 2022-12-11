@@ -1,8 +1,6 @@
 # Baloney
 > Minimal (s)css framework with a focus on variables
 
-Based on [Bootstrap](https://github.com/twbs/bootstrap)'s variable file
-
 ## Todo
 - .l .t .b. .r with -#{spacer} for absolutely positioned elements
 
