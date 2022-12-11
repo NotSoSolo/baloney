@@ -1,6 +1,7 @@
 # Baloney
-< 2kb (compressed with brotli), < 3kb (gzipped)
 > Minimal (s)css framework with a focus on variables
+
+**< 2kb** (compressed with brotli), **< 3kb** (gzipped)
 
 ## Todo
 - .l .t .b. .r with -#{spacer} for absolutely positioned elements
