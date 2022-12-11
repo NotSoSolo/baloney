@@ -1,4 +1,5 @@
 # Baloney
+< 2kb (compressed with brotli), < 3kb (gzipped)
 > Minimal (s)css framework with a focus on variables
 
 ## Todo
