@@ -1,0 +1,9 @@
+$width-page: 1600px !default;
+$width-prose: 65ch !default;
+$width-prose-wide: 80ch !default;
+
+$widths: (
+    "page": min(100%, #{$width-page}),
+    "prose": $width-prose,
+    "prose-wide": $width-prose-wide,
+) !default;

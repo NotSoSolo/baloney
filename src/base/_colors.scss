@@ -1,17 +1,5 @@
 @use 'sass:math';
 
-// Set classes for theme-color class bindings and create css variables
-
-@each $name, $color in $theme-colors {
-    .text-#{$name} {
-        color: $color;
-    }
-
-    .bg-#{$name} {
-        background-color: $color;
-    }
-}
-
 // TODO: Perhaps change this color adjust instead of change in order to allow for any base color to work
 :root {
     @each $name, $color in $theme-colors {

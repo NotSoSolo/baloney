@@ -1,0 +1,84 @@
+@if $link-classes {
+.link {
+    $self: &;
+
+    display: inline-flex;
+    gap: var(--spacer-1);
+    align-items: center;
+    font-weight: var(--font-weight-bold);
+    line-height: 100%;
+    color: var(--color-grayscale-800);
+    cursor: pointer;
+    transition: var(--transition-fast);
+
+    &.active,
+    &:hover {
+        color: var(--color-brand-600);
+    }
+
+    &:active {
+        color: var(--color-brand-700);
+    }
+
+    &:disabled,
+    &--disabled {
+        cursor: not-allowed;
+        user-select: none;
+        opacity: var(--opacity-link-disabled);
+
+        &.active,
+        &:active,
+        &:hover {
+            color: var(--color-grayscale-800);
+        }
+    }
+
+    &--sm {
+        font-size: var(--font-size-4);
+    }
+
+    &--md {
+        font-size: var(--font-size-5);
+    }
+
+    &--xl {
+        font-size: var(--font-size-6);
+    }
+
+    &--no-gap {
+        gap: unset;
+    }
+
+    &--no-select {
+        user-select: none;
+    }
+
+    @each $name, $color in $theme-colors {
+        &--#{$name} {
+            color: var(--color-#{$name}-500);
+
+            &.active,
+            &:hover {
+                color: var(--color-#{$name}-600);
+            }
+
+            &:active {
+                color: var(--color-#{$name}-700);
+            }
+
+            &:disabled,
+            &#{$self}--disabled {
+                cursor: not-allowed;
+                user-select: none;
+                opacity: var(--opacity-link-disabled);
+
+                &.active,
+                &:active,
+                &:hover {
+                    color: var(--color-#{$name}-500);
+                }
+            }
+        }
+    }
+}
+}

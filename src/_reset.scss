@@ -1,5 +1,5 @@
 :root {
-    font-size: 1rem; // Might change this in the future if it proves problematic on ionic
+    font-size: 1rem;
 }
 
 html,
@@ -32,6 +32,7 @@ object {
     display: block;
     // ? Disabled for now, We'll see if this ends up being an issue
     // vertical-align: middle;
+    max-width: 100%;
 }
 
 :focus {

@@ -1,0 +1,20 @@
+@if $layout-classes {
+    .page-wrapper {
+        margin-inline: auto;
+        width: var(--width-page);
+
+        @each $name, $value in $widths {
+            &--#{$name} {
+                width: var(--width-#{$name});
+            }
+        }
+    }
+
+    .width {
+        @each $name, $value in $widths {
+            &-#{$name} {
+                width: var(--width-#{$name});
+            }
+        }
+    }
+}
