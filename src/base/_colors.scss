@@ -1,14 +1,37 @@
 @use 'sass:math';
 
+// Slightly lighten a color
+@function tint($color, $percentage) {
+    @return mix(white, $color, $percentage);
+}
+
+// Slightly darken a color
+@function shade($color, $percentage) {
+    @return mix(black, $color, $percentage);
+}
+
+
 // TODO: Perhaps change this color adjust instead of change in order to allow for any base color to work
 :root {
     @each $name, $color in $theme-colors {
         $color-extra-light: change-color($color, $lightness: 80%);
         $color-light: change-color($color, $lightness: 60%);
 
-        @each $color-scale in $color-scales {
-            $color-value: change-color($color, $lightness: math.div($color-scale,10) * 1%);
-            --color-#{$name}-#{$color-scale}: #{$color-value};
-        }        
+        @if $color-change {
+            @each $color-scale in $color-scales {
+                $color-value: change-color($color, $lightness: math.div($color-scale, 10) * 1%);
+                --color-#{$name}-#{$color-scale}: #{$color-value};
+            }
+        }
+        @else {
+            @debug "wajo";
+            @each $color-scale in $color-scales {
+                // $offset_color_by: math.abs($color-scale - 500) * 1;
+                // @debug $offset_color_by;
+                $percentage: math.abs(math.div($color-scale, 10) * 1%);
+                $color-value: adjust-color($color, $lightness: $percentage - 50% );
+                --color-#{$name}-#{$color-scale}: #{$color-value};
+            }
+        }
     }
 }
