@@ -1,18 +1,41 @@
 {
-    "name": "baloney",
-    "version": "0.0.1",
-    "description": "CSS utilities and variables by NotSoSolo",
-    "main": "src/index.scss",
-    "sass": "src/index.scss",
-    "style": "src/index.scss",
-    "scripts": {
-        "dev": "sass --watch src/index.scss:dev/baloney.css",
-        "build": "sass src/index.scss:dist/baloney.min.css --style compressed && gzip -k -f -9 dist/baloney.min.css && brotli -f dist/baloney.min.css -o dist/baloney.min.css.br",
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "author": "NotSoSolo",
-    "license": "ISC",
-    "devDependencies": {
-        "sass": "^1.56.2"
-    }
+  "name": "baloney",
+  "version": "0.0.1",
+  "description": "CSS utilities and variables by NotSoSolo",
+  "main": "src/index.scss",
+  "sass": "src/index.scss",
+  "style": "src/index.scss",
+  "scripts": {
+    "dev": "sass --watch src/index.scss:dev/baloney.css",
+    "build": "sass src/index.scss:dist/baloney.min.css --style compressed && gzip -k -f -9 dist/baloney.min.css && brotli -f dist/baloney.min.css -o dist/baloney.min.css.br",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "author": "NotSoSolo",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.20.12",
+    "@storybook/addon-actions": "^7.0.0-beta.20",
+    "@storybook/addon-essentials": "^7.0.0-beta.20",
+    "@storybook/addon-interactions": "^7.0.0-beta.20",
+    "@storybook/addon-links": "^7.0.0-beta.20",
+    "@storybook/builder-webpack5": "^7.0.0-beta.20",
+    "@storybook/html": "^7.0.0-beta.20",
+    "@storybook/html-webpack5": "^7.0.0-beta.20",
+    "@storybook/manager-webpack5": "^6.5.0-rc.1",
+    "@storybook/preset-scss": "^1.0.3",
+    "@storybook/testing-library": "^0.0.14-next.1",
+    "babel-loader": "^8.3.0",
+    "css-loader": "^6.7.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sass": "^1.57.1",
+    "sass-loader": "10",
+    "storybook": "^7.0.0-beta.20",
+    "storybook-addon-sass-postcss": "^0.1.3",
+    "style-loader": "^3.3.1",
+    "webpack": "5"
+  },
+  "dependencies": {}
 }

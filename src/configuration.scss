@@ -1,0 +1,21 @@
+$button-classes: true !default;
+$link-classes: true !default;
+$header-classes: true !default;
+$layout-classes: true !default;
+$spacer-classes: true !default;
+$label-classes: true !default;
+$color-change: false !default; // Will adjust if false
+$color-contrast-threshold: 60% !default;
+
+// Colors
+$color-primary-500: #bc7225;
+$color-accent-500: #4b93b9;
+$color-grayscale-500: #71717a;
+$color-success-500: #20fc8f;
+$color-warning-500: #f7b32b;
+$color-danger-500: #ec7550;
+$color-dark-500: #00272b;
+
+// Buttons
+$button-bg-scale: 300;
+$button-bg-hover-scale: 500;

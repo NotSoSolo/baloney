@@ -1,0 +1,25 @@
+@use 'sass:math';
+
+// Used for things like automatically choosing between a dark or light foreground color for buttons depending on their background
+@function contrast-color($color, $light-color, $dark-color) {
+    @if lightness($color) < $color-contrast-threshold {
+        @return $light-color;
+    }
+    @else {
+        @return $dark-color;
+    }
+}
+
+@function color-from-scale($color-500, $color-scale) {
+    @if $color-change {
+        $color-value: change-color($color-500, $lightness: math.div($color-scale, 10) * 1%);
+        @return $color-value;
+    }
+    @else {
+        // $offset_color_by: math.abs($color-scale - 500) * 1;
+        // @debug $offset_color_by;
+        $percentage: math.abs(math.div($color-scale, 10) * 1%);
+        $color-value: adjust-color($color-500, $lightness: $percentage - 50%);
+        @return $color-value;
+    }
+}
