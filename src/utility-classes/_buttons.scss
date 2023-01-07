@@ -12,7 +12,7 @@
         border: var(--border-color, none);
         border-radius: var(--border-radius-3);
         outline: .25rem solid var(--button-outline, transparent);
-    
+
         // Used for accent colors (hover, active, focus, etc), use change this when a hover color requires a different color e.g. on red buttons, etc
         --secondary-button-color: var(--color-grayscale-600);
     

@@ -1,9 +1,0 @@
-@each $offset, $value in $offset-values {
-    .w-#{$offset} {
-        width: $value;
-    }
-
-    .h-#{$offset} {
-        height: $value;
-    }
-}
