@@ -10,6 +10,12 @@
     @return mix(black, $color, $percentage);
 }
 
+:root {
+    @each $name, $color in $fixed-theme-colors {
+        --theme-color-#{$name}: #{$color};
+    }
+}
+
 
 // TODO: Perhaps change this color adjust instead of change in order to allow for any base color to work
 :root {

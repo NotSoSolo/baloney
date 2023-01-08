@@ -8,14 +8,26 @@ $color-change: false !default; // Will adjust if false
 $color-contrast-threshold: 60% !default;
 
 // Colors
-$color-primary-500: #bc7225;
-$color-accent-500: #4b93b9;
-$color-grayscale-500: #71717a;
-$color-success-500: #20fc8f;
-$color-warning-500: #f7b32b;
-$color-danger-500: #ec7550;
-$color-dark-500: #00272b;
+$color-primary-500: #bc7225 !default;
+$color-accent-500: #4b93b9 !default;
+$color-grayscale-500: #71717a !default;
+$color-success-500: #20fc8f !default;
+$color-warning-500: #f7b32b !default;
+$color-danger-500: #ec7550 !default;
+$color-dark-500: #00272b !default;
+
+$fixed-theme-colors: (
+    primary: #5e2bff,
+    danger: #fb3640,
+    success: #20fc8f,
+    warning: #ffd23f,
+    warning-secondary: #f7b32b,
+    surface: #002e2c,
+    dark: #00272b,
+    camo: #6c7d47,
+    sand: #f3d9b1
+) !default;
 
 // Buttons
-$button-bg-scale: 300;
-$button-bg-hover-scale: 500;
+$button-bg-scale: 300 !default;
+$button-bg-hover-scale: 500 !default;
