@@ -82,98 +82,52 @@
         &--fill {
             width: 100%;
         }
-   
-        @each $name, $value in $theme-colors {
-
-            &--#{$name} {
-                color: contrast-color(
-                    color-from-scale($value, $button-bg-scale),
-                    color-from-scale($color-grayscale-500, 900),
-                    color-from-scale($color-grayscale-500, 50)
-                );
-                background-color: var(--color-#{$name}-#{$button-bg-scale});
-
-                &:hover {
-                    color: ;
-                }
+    
+        &--tertiary {
+            --border-color: 1px solid var(--color-grayscale-300);
+        }
+    
+        &--faded {
+            color: var(--color-grayscale-900);
+            background-color: var(--color-grayscale-100);
+    
+            &:hover,
+            &:focus,
+            &:active {
+                color: var(--color-primary-700);
+                background-color: var(--color-primary-50);
             }
         }
-
-        
-        // &--secondary {
-        //     color: var(--color-primary-700);
-        //     background-color: var(--color-primary-50);
     
-        //     &:hover {
-        //         background-color: var(--color-primary-100);
-        //     }
+        &--link {
+            color: var(--color-grayscale-600);
+            background-color: unset;
     
-        //     &:disabled,
-        //     &:focus,
-        //     &:active {
-        //         background-color: var(--color-primary-100);
-        //     }
+            &:hover,
+            &:focus,
+            &:active {
+                color: var(--secondary-button-color);
+                background-color: var(--color-grayscale-100);
+            }
+        }
     
-        //     &:focus,
-        //     &:active {
-        //         --button-outline: var(--color-primary-100);
-        //     }
+        &[disabled],
+        &--disabled {
+            pointer-events: none;
+            cursor: not-allowed;
+            opacity: var(--opacity-disabled);
+            // TODO: current color-200
+            // background-color: ${p => p.theme.primary200};
+        }
     
-        //     &:disabled {
-        //         background-color: var(--color-primary-300);
-        //     }
-        // }
+        &--no-outline {
+            outline: none;
     
-        // &--tertiary {
-        //     --border-color: 1px solid var(--color-grayscale-300);
-        // }
-    
-        // &--danger {
-        //     --border-color: 1px solid var(--color-danger-300);
-        //     background-color: var(--color-danger-600);
-        // }
-    
-        // &--faded {
-        //     color: var(--color-grayscale-900);
-        //     background-color: var(--color-grayscale-100);
-    
-        //     &:hover,
-        //     &:focus,
-        //     &:active {
-        //         color: var(--color-primary-700);
-        //         background-color: var(--color-primary-50);
-        //     }
-        // }
-    
-        // &--link {
-        //     color: var(--color-grayscale-600);
-        //     background-color: unset;
-    
-        //     &:hover,
-        //     &:focus,
-        //     &:active {
-        //         color: var(--secondary-button-color);
-        //         background-color: var(--color-grayscale-100);
-        //     }
-        // }
-    
-        // &[disabled],
-        // &--disabled {
-        //     pointer-events: none;
-        //     cursor: not-allowed;
-        //     opacity: var(--opacity-disabled);
-        //     // TODO: current color-200
-        //     // background-color: ${p => p.theme.primary200};
-        // }
-    
-        // &--no-outline {
-        //     outline: none;
-    
-        //     &:focus,
-        //     &:active,
-        //     &:hover {
-        //         outline: none;
-        //     }
-        // }
+            &:focus,
+            &:active,
+            &:hover {
+                outline: none;
+            }
+        }
     }
 }
